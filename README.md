@@ -1,4 +1,4 @@
-# Modified Kitronik Servo Blocks to support Calliope mini Servo Konnektor
+# Servo Blocks to support Calliope mini Servo Konnektor
 
 Blocks that support the Calliope mini Motion kit, based on the Kitronik Servo:Lite board.
 
