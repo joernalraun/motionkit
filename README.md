@@ -1,6 +1,6 @@
-# Kitronik blocks for micro:bit
+# Modified Kitronik Servo Blocks to support Calliope mini Servo Konnektor
 
-Blocks that support [Kitronik Servo:Lite board for the micro:bit](https://www.kitronik.co.uk/5623-servolite-board-for-move-mini.html)
+Blocks that support the Calliope mini Motion kit, based on the Kitronik Servo:Lite board.
 
 ## ServoLite
 
@@ -39,5 +39,5 @@ MIT
 
 
 ```package
-pxt-kitronik-servo-lite=github:KitronikLtd/pxt-kitronik-servo-lite
+pxt-kitronik-servo-lite=github:joernalraun/motionkit
 ```
