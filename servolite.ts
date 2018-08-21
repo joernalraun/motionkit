@@ -19,8 +19,8 @@ namespace kitronik_servo_lite {
     //% blockId=kitronik_servolite_servos_forward
     //% block="drive forward"
     export function forward(): void {
-        pins.servoWritePin(AnalogPin.c16, 0);
-        pins.servoWritePin(AnalogPin.c17, 180);
+        pins.servoWritePin(AnalogPin.C16, 0);
+        pins.servoWritePin(AnalogPin.C17, 180);
     }
 
     /**
@@ -29,8 +29,8 @@ namespace kitronik_servo_lite {
     //% blockId=kitronik_servolite_servos_backward
     //% block="drive backward"
     export function backward(): void {
-        pins.servoWritePin(AnalogPin.c16, 180);
-        pins.servoWritePin(AnalogPin.c17, 0);
+        pins.servoWritePin(AnalogPin.C16, 180);
+        pins.servoWritePin(AnalogPin.C17, 0);
     }
 
     /**
@@ -39,8 +39,8 @@ namespace kitronik_servo_lite {
     //% blockId=kitronik_servolite_servos_left
     //% block="turn left"
     export function left(): void {
-        pins.servoWritePin(AnalogPin.c16, 0);
-        pins.servoWritePin(AnalogPin.c17, 0);
+        pins.servoWritePin(AnalogPin.C16, 0);
+        pins.servoWritePin(AnalogPin.C17, 0);
     }
 
 	/**
@@ -49,8 +49,8 @@ namespace kitronik_servo_lite {
     //% blockId=kitronik_servolite_servos_right
     //% block="turn right"
     export function right(): void {
-        pins.servoWritePin(AnalogPin.c16, 180);
-        pins.servoWritePin(AnalogPin.c17, 180);
+        pins.servoWritePin(AnalogPin.C16, 180);
+        pins.servoWritePin(AnalogPin.C17, 180);
     }
 
 	/**
@@ -63,8 +63,8 @@ namespace kitronik_servo_lite {
     //% blockId=kitronik_servolite_servos_stop
     //% block="stop"
     export function stop(): void {
-        pins.analogWritePin(AnalogPin.c16, 0);
-        pins.analogWritePin(AnalogPin.c17, 0);
+        pins.analogWritePin(AnalogPin.C16, 0);
+        pins.analogWritePin(AnalogPin.C17, 0);
     }
 
 	/**
@@ -74,8 +74,8 @@ namespace kitronik_servo_lite {
     //% blockId=kitronik_servolite_servos_neutral
     //% block="goto neutral position"
     export function neutral(): void {
-        pins.servoWritePin(AnalogPin.c16, 90);
-        pins.servoWritePin(AnalogPin.c17, 90);
+        pins.servoWritePin(AnalogPin.C16, 90);
+        pins.servoWritePin(AnalogPin.C17, 90);
     }
 
     /**
@@ -115,8 +115,8 @@ namespace kitronik_servo_lite {
     //% block="turn right %deg|degrees"
     export function turnRight(deg: number): void {
         let timeToWait = (deg * microSecInASecond) / numberOfDegreesPerSec;// calculation done this way round to avoid zero rounding
-        pins.servoWritePin(AnalogPin.c16, 130);
-        pins.servoWritePin(AnalogPin.c17, 130);
+        pins.servoWritePin(AnalogPin.C16, 130);
+        pins.servoWritePin(AnalogPin.C17, 130);
         control.waitMicros(timeToWait);
         stop();
     }
@@ -132,8 +132,8 @@ namespace kitronik_servo_lite {
     //% block="turn left %deg|degrees"
     export function turnLeft(deg: number): void {
         let timeToWait = (deg * microSecInASecond) / numberOfDegreesPerSec;// calculation done this way round to avoid zero rounding
-        pins.servoWritePin(AnalogPin.c16, 50);
-        pins.servoWritePin(AnalogPin.c17, 50);
+        pins.servoWritePin(AnalogPin.C16, 50);
+        pins.servoWritePin(AnalogPin.C17, 50);
         control.waitMicros(timeToWait);
         stop()
     }
