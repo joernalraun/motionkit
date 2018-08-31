@@ -1,5 +1,5 @@
 {
-    "name": "pxt-motion-kit",
+    "name": "motion-kit",
     "version": "1.0.6",
     "description": "Block to use the Calliope mini Motion Kit in MakeCode",
     "license": "MIT",
@@ -9,8 +9,8 @@
     "files": [
         "README.md",
         "servolite.ts",
-        "_locales/de/pxt-motion-kit-strings.json",
-        "_locales/de/pxt-motion-kit-jsdoc-strings.json"
+        "_locales/de/motion-kit-strings.json",
+        "_locales/de/motion-kit-jsdoc-strings.json"
     ],
     "testFiles": [
         "tests.ts"
