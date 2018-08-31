@@ -1,0 +1,14 @@
+{
+	"pxt-motion-kit.motion_kit_servos_forward": "Geradeaus",
+	"pxt-motion-kit.motion_kit_servos_backward": "Rückwärts",
+	"pxt-motion-kit.motion_kit_servos_left": "Links",
+	"pxt-motion-kit.motion_kit_servos_right": "Rechts",
+	"pxt-motion-kit.motion_kit_servos_stop": "Anhalten",
+	"pxt-motion-kit.motion_kit_servos_neutral": "Leerlauf",
+	"pxt-motion-kit.motion_kit_drive_forwards": "Eine definierte Strecke vorfahren",
+	"pxt-motion-kit.motion_kit_drive_backwards": "Eine definierte Strecke rückwärts fahren",
+	"pxt-motion-kit.motion_kit_turn_left": "Um einen definierten Winkel nach links drehen",
+	"pxt-motion-kit.motion_kit_turn_right": "Um einen definierten Winkel nach rechts drehen",
+	"pxt-motion-kit.motion_kit_set_turn_speed_param": "Um einen definierten Winkel drehen",
+	"pxt-motion-kit.motion_kit_set_movement_speed_param": "Um einen definierte Strecke nach vorn fahren"
+}
