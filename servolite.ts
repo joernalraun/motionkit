@@ -1,5 +1,5 @@
 //% weight=100 color=#00A654 icon="\uf1b9" block="Motion-Kit"
-namespace motion_kit {
+namespace MotionKit {
 
 	
     /*some parameters used for controlling the turn and length */
