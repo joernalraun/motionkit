@@ -1,6 +1,6 @@
-# Servo Blocks to support Calliope mini Servo Konnektor
+# Calliope mini Motion Kit, update to the Kitronik blocks for micro:bit
 
-Blocks that support the Calliope mini Motion kit, based on the Kitronik Servo:Lite board.
+Blocks to support the Calliope mini Motion Kit.
 
 ## ServoLite
 
@@ -8,7 +8,7 @@ Blocks that support the Calliope mini Motion kit, based on the Kitronik Servo:Li
 
 ```blocks
 input.onButtonPressed(Button.A, () => {
-    kitronik_servo_lite.turnRight(90);
+    motion_kit.turnRight(90);
 })
 ```
 
@@ -16,7 +16,7 @@ input.onButtonPressed(Button.A, () => {
 
 ```blocks
 input.onButtonPressed(Button.B, () => {
-    kitronik_servo_lite.driveForwards(10);
+    motion_kit.driveForwards(10);
 })
 ```
 
@@ -24,7 +24,7 @@ input.onButtonPressed(Button.B, () => {
 
 ```blocks
 input.onButtonPressed(Button.AB, () => {
-    kitronik_servo_lite.stop();
+    motion_kit.stop();
 })
 ```
 
@@ -34,10 +34,10 @@ MIT
 
 ## Supported targets
 
-* for PXT/microbit
+* for PXT/calliope
 (The metadata above is needed for package search.)
 
 
 ```package
-pxt-kitronik-servo-lite=github:joernalraun/motionkit
+pxt-motion-kit=github:joernalraun/motionkit
 ```

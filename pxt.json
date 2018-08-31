@@ -1,14 +1,16 @@
 {
-    "name": "pxt-kitronik-servo-lite",
-    "version": "1.0.5",
-    "description": "Blocks to simplify using Kitronik Servo:Lite board in PXT",
+    "name": "pxt-motion-kit",
+    "version": "1.0.6",
+    "description": "Block to use the Calliope mini Motion Kit in MakeCode",
     "license": "MIT",
     "dependencies": {
         "core": "*"
     },
     "files": [
         "README.md",
-        "servolite.ts"
+        "servolite.ts",
+        "_locales/de/pxt-motion-kit-strings.json",
+        "_locales/de/pxt-motion-kit-jsdoc-strings.json"
     ],
     "testFiles": [
         "tests.ts"
