@@ -5,10 +5,10 @@
 	"MotionKit.right|block": "Rechts",
 	"MotionKit.stop|block": "Anhalten",
 	"MotionKit.neutral|block": "Leerlauf",
-	"MotionKit.driveForwards|block": "Eine Strecke von | %howFar | mm vorwärtz fahren",
-	"MotionKit.driveBackwards|block": "Eine Strecke von | %howFar | mm zurück fahren",
-	"MotionKit.turnLeft|block": "Um | %deg | Grad nach links",
-	"MotionKit.turnRight|block": "Um | %deg | Grad nach rechts",
-	"MotionKit.setDegreesPerSecond|block": "Setze | %DegPerSec | Grad Drehung pro Sekunde",
-	"MotionKit.setDistancePerSecond|block": "Setze | %DistPerSec | mm fahrt pro Sekunde"
+	"MotionKit.driveForwards|block": "Eine Strecke von | %howFar | mm vorwärts fahren",
+	"MotionKit.driveBackwards|block": "Eine Strecke von | %howFar | mm rückwärts fahren",
+	"MotionKit.turnLeft|block": "Fahre | %deg | Grad nach links",
+	"MotionKit.turnRight|block": "Fahre | %deg | Grad nach rechts",
+	"MotionKit.setDegreesPerSecond|block": "Fahre eine | %DegPerSec | Grad Drehung pro Sekunde",
+	"MotionKit.setDistancePerSecond|block": "Fahre | %DistPerSec | mm pro Sekunde"
 }
