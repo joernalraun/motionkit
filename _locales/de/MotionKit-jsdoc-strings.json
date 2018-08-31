@@ -1,14 +1,14 @@
 {
-	"MotionKit.motion_kit_servos_forward": "Geradeaus",
-	"MotionKit.motion_kit_servos_backward": "Rückwärts",
-	"MotionKit.motion_kit_servos_left": "Links",
-	"MotionKit.motion_kit_servos_right": "Rechts",
-	"MotionKit.motion_kit_servos_stop": "Anhalten",
-	"MotionKit.motion_kit_servos_neutral": "Leerlauf",
-	"MotionKit.motion_kit_drive_forwards": "Eine definierte Strecke vorfahren",
-	"MotionKit.motion_kit_drive_backwards": "Eine definierte Strecke rückwärts fahren",
-	"MotionKit.motion_kit_turn_left": "Um einen definierten Winkel nach links drehen",
-	"MotionKit.motion_kit_turn_right": "Um einen definierten Winkel nach rechts drehen",
-	"MotionKit.motion_kit_set_turn_speed_param": "Um einen definierten Winkel drehen",
-	"MotionKit.motion_kit_set_movement_speed_param": "Um einen definierte Strecke nach vorn fahren"
+	"MotionKit.forward": "Geradeaus",
+	"MotionKit.backward": "Rückwärts",
+	"MotionKit.left": "Links",
+	"MotionKit.right": "Rechts",
+	"MotionKit.stop": "Anhalten",
+	"MotionKit.neutral": "Leerlauf",
+	"MotionKit.driveForwards": "Eine definierte Strecke vorfahren",
+	"MotionKit.driveBackwards": "Eine definierte Strecke rückwärts fahren",
+	"MotionKit.turnLeft": "Um einen definierten Winkel nach links drehen",
+	"MotionKit.turnRight": "Um einen definierten Winkel nach rechts drehen",
+	"MotionKit.setDegreesPerSecond": "Setzt die Drehung in Grad, die pro sekunde gedreht wird",
+	"MotionKit.setDistancePerSecond": "Setzt die Distanz  in mm, die pro sekunde gefahren wird"
 }
