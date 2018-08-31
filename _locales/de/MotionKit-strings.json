@@ -1,0 +1,14 @@
+{
+	"MotionKit.motion_kit_servos_forward|block": "Geradeaus",
+	"MotionKit.motion_kit_servos_backward|block": "Rückwärts",
+	"MotionKit.motion_kit_servos_left|block": "Links",
+	"MotionKit.motion_kit_servos_right|block": "Rechts",
+	"MotionKit.motion_kit_servos_stop|block": "Anhalten",
+	"MotionKit.motion_kit_servos_neutral|block": "Leerlauf",
+	"MotionKit.motion_kit_drive_forwards|block": "Strecke von %howFar vorfahren",
+	"MotionKit.motion_kit_drive_backwards|block": "Strecke %howFar vorfahren",
+	"MotionKit.motion_kit_turn_left|block": "Um %deg Grad nach links",
+	"MotionKit.motion_kit_turn_right|block": "Um %deg Grad nach rechts",
+	"MotionKit.motion_kit_set_turn_speed_param|block": "Um %DegPerSec Grad drehen",
+	"MotionKit.motion_kit_set_movement_speed_param|block": "Um %DistPerSec mm fahren"
+}
