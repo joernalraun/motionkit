@@ -1,4 +1,4 @@
-//% weight=100 color=#00A654 icon="\uf1b9" block="Motion-Kit"
+//% weight=100 color=#00A654 icon="\uf1b9" block="MotionKit"
 namespace MotionKit {
 
 	
