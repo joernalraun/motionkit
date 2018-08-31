@@ -7,8 +7,8 @@
 	"MotionKit.neutral": "Leerlauf",
 	"MotionKit.driveForwards": "Eine definierte Strecke vorfahren",
 	"MotionKit.driveBackwards": "Eine definierte Strecke rückwärts fahren",
-	"MotionKit.turnLeft": "Um einen definierten Winkel nach links drehen",
-	"MotionKit.turnRight": "Um einen definierten Winkel nach rechts drehen",
+	"MotionKit.turnLeft": "Das Fahrzeug um einen definierten Winkel nach links drehen",
+	"MotionKit.turnRight": "Das Fahrzeug um einen definierten Winkel nach rechts drehen",
 	"MotionKit.setDegreesPerSecond": "Setzt die Drehung in Grad, die pro sekunde gedreht wird",
-	"MotionKit.setDistancePerSecond": "Setzt die Distanz  in mm, die pro sekunde gefahren wird"
+	"MotionKit.setDistancePerSecond": "Setzt die Distanz in mm, die pro sekunde gefahren wird"
 }
