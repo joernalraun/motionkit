@@ -6,6 +6,117 @@ namespace MotionKit {
     const microSecInASecond = 1000000
     let distancePerSec = 100
     let numberOfDegreesPerSec = 200
+    
+        /* sender or receiver role
+     * false = sender
+     * true = receiver
+     */
+    let btrole = false
+
+    //flag for initialization
+    let isinitialized = false
+
+    //saved xyz values
+    let x = 0
+    let y = 0
+    let z = 0
+
+    //servo left right
+    let l = 0
+    let r = 0
+
+    /**
+     * TODO: Bluetooth channe to send data to
+     * @param channel Bluetooth channel number, eg: 0
+     * @param role , eg: false
+     */
+    //% block
+    export function init(channel: number, role: boolean): void {
+        if (isinitialized) {
+            return
+        }
+        //set channel
+        radio.setGroup(channel)
+        btrole = role
+        isinitialized = true
+    }
+
+    radio.onDataPacketReceived(({ receivedString: name, receivedNumber: value }) => {
+        if (isinitialized) {
+            if (btrole) {
+                //get xyz values
+                if (name == "X") {
+                    x = value
+                }
+                if (name == "Y") {
+                    y = value
+                }
+
+                //calculate servo drive values
+                r = y + x
+                l = -y + x
+
+                l = l / 2
+                r = r / 2
+
+                //write servo drive values
+                if (Math.abs(l) < 10) {//threshold for l
+                    pins.analogWritePin(AnalogPin.C17, 0);
+                } else {
+                    if (l > 90) {
+                        l = 90
+                    }
+                    if (l < -90) {
+                        l = -90
+                    }
+                    pins.servoWritePin(AnalogPin.C17, 90 + l)
+                }
+                if (Math.abs(r) < 10) {//threshold for r
+                    pins.analogWritePin(AnalogPin.C16, 0);
+                } else {
+                    if (r > 90) {
+                        r = 90
+                    }
+                    if (r < -90) {
+                        r = -90
+                    }
+                    pins.servoWritePin(AnalogPin.C16, 90 + r)
+                }
+            } else {
+                return
+            }
+        } else {
+            return
+        }
+    })
+
+    control.inBackground(() => {
+        while (!isinitialized) {
+            //wait for initialization
+        }
+        //return if initialized as receiver
+        if (btrole) {
+            return
+        }
+        //send xyz values in background
+        while (true) {
+            radio.sendValue("X", pins.map(
+                input.acceleration(Dimension.X),
+                -1024,
+                1023,
+                -90,
+                90
+            ));
+            radio.sendValue("Y", pins.map(
+                input.acceleration(Dimension.Y),
+                -1024,
+                1023,
+                -90,
+                90
+            ));
+            basic.pause(200)
+        }
+    })
 
     /**
      * Drives forwards. Call stop to stop
