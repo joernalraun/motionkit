@@ -141,7 +141,7 @@ namespace MotionKit {
                 -90,
                 90
             ));
-            basic.pause(200)
+            basic.pause(100)
         }
     })
 
