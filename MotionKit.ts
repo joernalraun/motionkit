@@ -16,15 +16,6 @@ namespace MotionKit {
     //flag for initialization
     let isinitialized = false
 
-    //saved xyz values
-    let x = 0
-    let y = 0
-    let z = 0
-
-    //servo left right
-    let l = 0
-    let r = 0
-
     /**
      * TODO: Bluetooth channe to send data to
      * @param channel Bluetooth channel number, eg: 0
@@ -41,54 +32,90 @@ namespace MotionKit {
         isinitialized = true
     }
 
-    radio.onDataPacketReceived(({ receivedString: name, receivedNumber: value }) => {
-        if (isinitialized) {
-            if (btrole) {
-                //get xyz values
-                if (name == "X") {
-                    x = value
-                }
-                if (name == "Y") {
-                    y = value
-                }
+    	let x = 0
+	let y = 0
+	let sl = 0
+	let sr = 0
 
-                //calculate servo drive values
-                r = y + x
-                l = -y + x
+	const hysterese = 10
 
-                l = l / 2
-                r = r / 2
+	radio.onDataPacketReceived(({ receivedString: name, receivedNumber: value }) => {
+	    if ((name == "X") || (name == "Y")) {
+		if (Math.abs(value) > hysterese) {
+		    sl = 0
+		    sr = 0
 
-                //write servo drive values
-                if (Math.abs(l) < 10) {//threshold for l
-                    pins.analogWritePin(AnalogPin.C17, 0);
-                } else {
-                    if (l > 90) {
-                        l = 90
-                    }
-                    if (l < -90) {
-                        l = -90
-                    }
-                    pins.servoWritePin(AnalogPin.C17, 90 + l)
-                }
-                if (Math.abs(r) < 10) {//threshold for r
-                    pins.analogWritePin(AnalogPin.C16, 0);
-                } else {
-                    if (r > 90) {
-                        r = 90
-                    }
-                    if (r < -90) {
-                        r = -90
-                    }
-                    pins.servoWritePin(AnalogPin.C16, 90 + r)
-                }
-            } else {
-                return
-            }
-        } else {
-            return
-        }
-    })
+		    if (name == "X") {
+			if (x == value) {
+			    return
+			}
+			x = value
+		    }
+
+		    if (name == "Y") {
+			if (y == value) {
+			    return
+			}
+			y = value
+		    }
+
+		    if (y < 0) {//FW
+			if (x > 0) {//Q1
+
+			    sl = 90 - (y - x / 2)
+			    sr = 90 + (y + x / 2)
+			} else {//Q2
+
+			    sl = 90 - (y - x / 2)
+			    sr = 90 + (y + x / 2)
+			}
+		    } else {//RW
+			if (x < 0) {//Q3
+
+			    sl = 90 - (y - x / 2)
+			    sr = 90 + (y + x / 2)
+			} else {//Q4
+
+			    sl = 90 - (y - x / 2)
+			    sr = 90 + (y + x / 2)
+			}
+		    }
+
+		    //check limits
+		    if (sl > 180) {
+			sl = 180
+		    }
+		    if (sr > 180) {
+			sr = 180
+		    }
+		    if (sl < 0) {
+			sl = 0
+		    }
+		    if (sr < 0) {
+			sr = 0
+		    }
+
+		    pins.servoWritePin(AnalogPin.C16, sl)
+		    pins.servoWritePin(AnalogPin.C17, sr)
+
+		} else {
+		    //
+		    if (name == "X") {
+			x = 0
+		    }
+		    if (name == "Y") {
+			y = 0
+		    }
+		    if ((y == 0) && (x == 0)) {
+			pins.digitalWritePin(DigitalPin.C16, 0)
+			pins.digitalWritePin(DigitalPin.C17, 0)
+		    }
+		}
+
+
+	    }
+	})
+
 
     control.inBackground(() => {
         while (!isinitialized) {
