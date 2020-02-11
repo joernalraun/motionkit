@@ -6,6 +6,7 @@ namespace MotionKit {
     const microSecInASecond = 1000000
     let distancePerSec = 100
     let numberOfDegreesPerSec = 200
+    let timeout = 0
     
         /* sender or receiver role
      * false = sender
@@ -17,8 +18,7 @@ namespace MotionKit {
     let isinitialized = false
 
     /**
-     * TODO: Bluetooth channe to send data to
-     * @param channel Bluetooth channel number, eg: 0
+     * @param channel Bluetooth channel number, eg: 0 max: 255
      * @param role , eg: false
      */
     //% block
@@ -120,6 +120,11 @@ namespace MotionKit {
     control.inBackground(() => {
         while (!isinitialized) {
             //wait for initialization
+		control.waitMicros(1000)
+		timeout += 1
+		if (timeout > 10000) {
+		    return
+		}
         }
         //return if initialized as receiver
         if (btrole) {
