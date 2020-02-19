@@ -17,6 +17,25 @@ namespace MotionKit {
     //flag for initialization
     let isinitialized = false
 
+    
+    /**
+     * TODO: Beschreibe deine Funktion hier
+     * @param PIN Gebe den pin an an dem der Lichtfolger angeschlossen ist, eg: DigitalPin.C18 , DigitalPin.C17
+     */
+    //% block
+    export function readLightfollower(PIN: DigitalPin): number {
+        if ((PIN == DigitalPin.C18) || (PIN == DigitalPin.C17)) {
+            if (pins.digitalReadPin(PIN) == 1) {
+                return 1
+            } else {
+                return 0
+            }
+        }
+        return 0
+    }
+    
+    
+    
     /**
      * @param channel Bluetooth channel number, eg: 0 max: 255
      * @param role , eg: false
