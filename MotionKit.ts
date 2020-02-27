@@ -12,7 +12,7 @@ namespace MotionKit {
      * false = sender
      * true = receiver
      */
-    let btrole = false
+    let btrole = 0
 
     //flag for initialization
     let isinitialized = false
@@ -35,9 +35,9 @@ namespace MotionKit {
     
     export enum roles{
 	    //% block=sender
-	    sender=false,
+	    sender=0,
 	    //% block=receiver
-	    receiver=true
+	    receiver=1
     }
     
     /**
