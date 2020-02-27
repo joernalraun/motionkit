@@ -21,7 +21,8 @@ namespace MotionKit {
     /**
      * @param PIN Gebe den pin an an dem der Lichtfolger angeschlossen ist, eg: DigitalPin.C18 , DigitalPin.C17
      */
-    //% block
+    //% blockId=motion_kit_readLightfollower
+    //% block="read light follower on pin | %PIN"
     export function readLightfollower(PIN: DigitalPin): number {
         if ((PIN == DigitalPin.C18) || (PIN == DigitalPin.C17)) {
             if (pins.digitalReadPin(PIN) == 1) {
@@ -44,6 +45,7 @@ namespace MotionKit {
      * @param channel Bluetooth channel number, eg: 0 max: 255
      * @param role , eg: false
      */
+    //% blockId=motion_kit_remote
     //% block="initialize mini on channel | %channel | as | %role"
     export function remote(channel: number, role: roles): void {
         if (isinitialized) {
