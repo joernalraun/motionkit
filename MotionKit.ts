@@ -19,7 +19,6 @@ namespace MotionKit {
 
     
     /**
-     * TODO: Beschreibe deine Funktion hier
      * @param PIN Gebe den pin an an dem der Lichtfolger angeschlossen ist, eg: DigitalPin.C18 , DigitalPin.C17
      */
     //% block
