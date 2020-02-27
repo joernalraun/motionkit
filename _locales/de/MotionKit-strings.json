@@ -11,5 +11,6 @@
 	"MotionKit.turnRight|block": "Um | %deg | Grad nach rechts",
 	"MotionKit.setDegreesPerSecond|block": "Setze | %DegPerSec | Grad Drehung pro Sekunde",
 	"MotionKit.setDistancePerSecond|block": "Setze | %DistPerSec | mm fahrt pro Sekunde",
-	"MotionKit.readLightfollower|block": "Lese Lichtfolger an pin | %PIN"
+	"MotionKit.readLightfollower|block": "Lese Lichtfolger an pin | %PIN",
+	"MotionKit.remote|block": "Sete den mini auf Kanal | %channel | und als | %role"
 }
