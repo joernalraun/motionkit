@@ -34,9 +34,9 @@ namespace MotionKit {
     }
     
     export enum roles{
-	    % block=sender
-	    sender=false
-	    % block=receiver
+	    //% block=sender
+	    sender=false,
+	    //% block=receiver
 	    receiver=true
     }
     
