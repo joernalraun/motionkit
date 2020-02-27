@@ -33,14 +33,19 @@ namespace MotionKit {
         return 0
     }
     
-    
+    export enum roles{
+	    % block=sender
+	    sender=false
+	    % block=receiver
+	    receiver=true
+    }
     
     /**
      * @param channel Bluetooth channel number, eg: 0 max: 255
      * @param role , eg: false
      */
-    //% block
-    export function init(channel: number, role: boolean): void {
+    //% block="initialize mini on channel | %channel | as | %role"
+    export function remote(channel: number, role: roles): void {
         if (isinitialized) {
             return
         }
