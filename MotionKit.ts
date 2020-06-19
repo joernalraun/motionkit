@@ -39,7 +39,7 @@ namespace MotionKit {
     }
 
 
-    enum side {
+    export enum side {
         //% block="links"
         Left = 0,
         //% block="rechts"
