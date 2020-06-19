@@ -12,5 +12,6 @@
 	"MotionKit.setDegreesPerSecond": "Setzt die Drehung in Grad, die pro sekunde gedreht wird",
 	"MotionKit.setDistancePerSecond": "Setzt die Distanz  in mm, die pro sekunde gefahren wird",
 	"MotionKit.readLightfollower": "Liest den Lichtfolger aus und gibt 0 oder 1 zurück",
+	"MotionKit.getLightDirection": "Liest den Lichtfolger aus und gibt an ob das Licht von links oder rechts kommt",
 	"MotionKit.remote": "Setzt mini auf einen Kanal von 0 bis 255 und die rolle als Sender oder Empfänger"
 }

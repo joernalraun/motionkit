@@ -12,5 +12,6 @@
 	"MotionKit.setDegreesPerSecond|block": "Setze | %DegPerSec | Grad Drehung pro Sekunde",
 	"MotionKit.setDistancePerSecond|block": "Setze | %DistPerSec | mm fahrt pro Sekunde",
 	"MotionKit.readLightfollower|block": "Lese Lichtfolger an pin | %PIN",
+	"MotionKit.getLightDirection|block": "Licht kommt von | %value",
 	"MotionKit.remote|block": "Sete den mini auf Kanal | %channel | und als | %role"
 }

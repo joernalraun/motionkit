@@ -17,6 +17,9 @@ namespace MotionKit {
     //flag for initialization
     let isinitialized = false
 
+    //light follower pin
+    let lfpin = DigitalPin.C18
+
     
     /**
      * @param PIN Gebe den pin an an dem der Lichtfolger angeschlossen ist, eg: DigitalPin.C18 , DigitalPin.C17
@@ -24,6 +27,7 @@ namespace MotionKit {
     //% blockId=motion_kit_readLightfollower
     //% block="read light follower on pin | %PIN"
     export function readLightfollower(PIN: DigitalPin): number {
+        lfpin = PIN
         if ((PIN == DigitalPin.C18) || (PIN == DigitalPin.C17)) {
             if (pins.digitalReadPin(PIN) == 1) {
                 return 1
@@ -33,6 +37,29 @@ namespace MotionKit {
         }
         return 0
     }
+
+
+    enum side {
+        //% block="links"
+        Left = 0,
+        //% block="rechts"
+        Right = 1
+    }
+    
+    /**
+     * Gebe an auf welche Richtung du reagieren willst links oder rechts
+     * @param value can be Left or Right, eg: Left
+     */
+    //% blockId=motion_kit_getLightDirection
+    //% block="light direction is | %value"
+    export function getLightDirection(value: side): boolean {
+        if (pins.digitalReadPin(lfpin) == value) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     
     export enum roles{
 	    //% block=sender
