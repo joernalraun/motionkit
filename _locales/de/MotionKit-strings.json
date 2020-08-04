@@ -5,7 +5,7 @@
 	"MotionKit.right|block": "Rechts",
 	"MotionKit.stop|block": "Anhalten",
 	"MotionKit.neutral|block": "Leerlauf",
-	"MotionKit.driveForwards|block": "Eine Strecke von | %howFar | mm vorwärtz fahren",
+	"MotionKit.driveForwards|block": "Eine Strecke von | %howFar | mm vorwärts fahren",
 	"MotionKit.driveBackwards|block": "Eine Strecke von | %howFar | mm zurück fahren",
 	"MotionKit.turnLeft|block": "Um | %deg | Grad nach links",
 	"MotionKit.turnRight|block": "Um | %deg | Grad nach rechts",
